@@ -1,39 +1,41 @@
-# 基于SpringBoot+Vue的企业人事管理系统+论文参考示例
+**[点我获取源码](https://x-x.fun/e/ZSbbd63c2cHey)💕🤞**
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+**[点我获取源码+论文参考示例](https://x-x.fun/e/TS5cc5a4773oB)💕🤞**
 
-#### 软件架构
-软件架构说明
+**郑重声明：项目经过本地测试，确保可以运行。由于精力有限，不提供调试服务。项目仅供学习和毕业设计参考~**
 
+#### 1.项目介绍
 
-#### 安装教程
+技术栈+工具： SpringBoot + Vue + redis + rabbitMQ + MySQL5.7及以上 + Maven + IDEA2022
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+系统角色： 管理员、HR、员工等，可自行根据需求定义
 
-#### 使用说明
+系统功能：管理员：公共模块（登录、在线聊天）、员工管理、员工发展（调动、考勤、培训、奖惩）、薪资管理、人事统计、系统管理等；HR：人事管理、在线聊天、考勤、薪资管理；员工：登录、在线聊天、考勤等
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 2.系统部署
 
-#### 参与贡献
+##### 2.1 后端部署
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- 创建数据库，导入sql文件
 
+- 打开idea，导入项目hr-admin
 
-#### 特技
+- 根据本地数据库环境，修改数据库连接 src/main/resources/application.yml  6-9行
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- 安装redis，启动redis服务，根据本地环境修改配置文件src/main/resources/application.yml  22-26行
+
+- 安装rabbitMQ， 启动rabbitMQ服务，根据本地环境修改配置文件src/main/resources/application.yml  30-34
+
+- 启动后端服务
+
+##### 2.2 管理web
+
+- 打开idea（需要安装Vue插件）或者其他前端IDE，导入项目hr-web
+
+- 测试的node版本V12，进入项目所在目录，执行：npm install
+
+- 执行 npm run serve
+
+- 启动成功后打开链接，管理员账号/密码： admin/123  HR账号/密码：xuanyuanqingfeng/123   员工账号/密码：张三丰/123
+
+- 在线聊天， 请打开两个浏览器。登录两个账号进行测试
